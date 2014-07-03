@@ -1,14 +1,15 @@
 package nao.cycledev.ocpjavase7;
 
 import nao.cycledev.ocpjavase7.c1.javaclassdesign.*;
+import nao.cycledev.ocpjavase7.c2.advancedclassdesign.*;
 
 public class MainApp {
 
     public static void main(String[] args) {
         System.out.println("Start!!!");
 
-        JavaClassDesing javaClassDesing = new JavaClassDesing();
+        AdvancedClassDesign advancedClassDesign = new AdvancedClassDesign();
 
-        javaClassDesing.circle3D();
+        advancedClassDesign.abstractClassTest();
     }
 }
