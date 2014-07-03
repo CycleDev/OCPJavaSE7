@@ -8,7 +8,7 @@ public class MainApp {
         System.out.println("Start!!!");
 
         JavaClassDesing javaClassDesing = new JavaClassDesing();
-        
+
         javaClassDesing.circle3D();
     }
 }
