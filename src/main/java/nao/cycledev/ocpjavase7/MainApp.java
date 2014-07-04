@@ -10,6 +10,6 @@ public class MainApp {
 
         AdvancedClassDesign advancedClassDesign = new AdvancedClassDesign();
 
-        advancedClassDesign.abstractClassTest();
+        advancedClassDesign.enumTest();
     }
 }
