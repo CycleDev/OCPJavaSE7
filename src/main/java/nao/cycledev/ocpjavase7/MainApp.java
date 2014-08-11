@@ -8,6 +8,6 @@ public class MainApp {
         //AdvancedClassDesign advancedClassDesign = new AdvancedClassDesign();
         //advancedClassDesign.enumTest();
         GenericsAndCollection genericsAndCollection = new GenericsAndCollection();
-        genericsAndCollection.GenericMethod();
+        genericsAndCollection.MapSpellWordsTest();
     }
 }

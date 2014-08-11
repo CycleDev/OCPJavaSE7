@@ -23,4 +23,14 @@ public class GenericsAndCollection {
         UtilitiesTest.printList(list);
     }
 
+    public void ArrayListPrint(){
+        ArrayListTest arrayListTest = new ArrayListTest();
+        arrayListTest.printArrayList();
+    }
+
+    public void MapSpellWordsTest(){
+        MapTest mapTest = new MapTest();
+        mapTest.spellCheckers("My calendor is full of tri and finee too. Please correct all tri!");
+    }
+
 }
