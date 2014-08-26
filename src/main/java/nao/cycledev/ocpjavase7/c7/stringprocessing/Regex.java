@@ -14,4 +14,12 @@ public class Regex {
             System.out.println(matcher.group());
         }
     }
+
+    public static void findZipCode(String str){
+        Pattern pattern = Pattern.compile("\\b\\d{5}\\b");
+        Matcher matcher = pattern.matcher(str);
+        while (matcher.find()){
+            System.out.println(matcher.group());
+        }
+    }
 }

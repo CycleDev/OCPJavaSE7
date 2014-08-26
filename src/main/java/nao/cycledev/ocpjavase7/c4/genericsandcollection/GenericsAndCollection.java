@@ -8,9 +8,9 @@ public class GenericsAndCollection {
 
     public void GenericTypeTest(){
 
-        GenericType<Integer> type1 = new GenericType<Integer>(1000);
+        GenericType<Integer> type1 = new GenericType<>(1000);
         System.out.println(type1);
-        GenericType<String> type2 = new GenericType<String>("Hello!!!");
+        GenericType<String> type2 = new GenericType<>("Hello!!!");
         System.out.println(type2);
     }
 

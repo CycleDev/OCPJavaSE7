@@ -13,4 +13,8 @@ public class StringProcessing {
     public void findEmails(){
         Regex.findEmail(testStr);
     }
+
+    public void findZipCode(){
+        Regex.findZipCode(testStr);
+    }
 }
