@@ -1,11 +1,25 @@
 package nao.cycledev.ocpjavase7.c8.javaiofundamentals;
 
+
 import java.io.*;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class CopyFiles {
+public class FileOperations {
+
+    public static void readTextFile(String fileName){
+        try (FileReader file = new FileReader(fileName)){
+            int c = 0;
+            while((c = file.read()) != -1){
+                System.out.print((char)c);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void copyFiles(String targetFile, String destFile){
         try (BufferedReader input = new BufferedReader(new FileReader(targetFile));
@@ -38,4 +52,5 @@ public class CopyFiles {
             e.printStackTrace();
         }
     }
+
 }
