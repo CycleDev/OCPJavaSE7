@@ -14,24 +14,5 @@ public abstract class Shape {
     }
 }
 
-class Circle extends Shape implements Rotable{
-    public double area(){
-        return 0;
-    }
 
-    public void rotate(int degree){
-        System.out.println("Rotate: " + degree);
-    }
-}
-
-class Squre extends Shape implements Rollable{
-
-    public double area(){
-        return 0;
-    }
-
-    public void roll(int degree){
-        System.out.println("Roll: " + degree);
-    }
-}
 
