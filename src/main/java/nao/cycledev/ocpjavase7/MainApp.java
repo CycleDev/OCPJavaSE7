@@ -1,6 +1,7 @@
 package nao.cycledev.ocpjavase7;
 
 
+import nao.cycledev.ocpjavase7.c3.oodprinciples.designpattern.singleton.Logger;
 import nao.cycledev.ocpjavase7.c3.oodprinciples.designpatterns.observer.Archive;
 import nao.cycledev.ocpjavase7.c3.oodprinciples.designpatterns.observer.Canvas;
 import nao.cycledev.ocpjavase7.c3.oodprinciples.designpatterns.observer.Circle;
@@ -16,6 +17,10 @@ public class MainApp {
         circle.addObserver(new Archive());
         circle.setPoint(new Point(3, 3));
         circle.ssetRadious(13);
+
+        Logger.getLogger().logInfo("Singleton");
+        Logger.getLogger().logInfo("Singleton 2");
+        Logger.getLogger().logError("Singleton 3");
 
     }
 }
