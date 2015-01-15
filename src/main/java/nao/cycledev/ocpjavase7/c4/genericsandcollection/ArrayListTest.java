@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class ArrayListTest {
 
-    public void printArrayList(){
+    public static void printArrayList(){
         ArrayList<String> strings = new ArrayList<>();
         strings.add("111");
         strings.add("222");

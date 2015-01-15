@@ -20,6 +20,9 @@ public class Circle extends Shape implements Rotable{
 
     @Override
     public String toString() {
-        return "Center: " + point + ", r= " + r;
+        return "Circle{" +
+                "point=" + point +
+                ", r=" + r +
+                '}';
     }
 }

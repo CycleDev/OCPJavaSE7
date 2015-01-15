@@ -16,4 +16,12 @@ public class Squre extends Shape implements Rollable{
     public void roll(int degree){
         System.out.println("Roll: " + degree);
     }
+
+    @Override
+    public String toString() {
+        return "Squre{" +
+                "w=" + w +
+                ", h=" + h +
+                '}';
+    }
 }
