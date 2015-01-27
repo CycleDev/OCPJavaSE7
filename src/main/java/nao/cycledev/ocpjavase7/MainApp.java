@@ -1,13 +1,15 @@
 package nao.cycledev.ocpjavase7;
 
-import nao.cycledev.ocpjavase7.c8.javaiofundamentals.ByteStreams;
-import nao.cycledev.ocpjavase7.c8.javaiofundamentals.FileOperations;
-import nao.cycledev.ocpjavase7.c8.javaiofundamentals.SystemConsol;
+import nao.cycledev.ocpjavase7.c9.javaionao2.PathTest;
 
 public class MainApp {
 
     public static void main(String[] args) {
 
-        ByteStreams.dataStreamTest("E:\\temp.data");
+        String strFile = "/Users/noprysk/Documents/test1.rtf";
+
+        PathTest.delete("/Users/noprysk/Documents/Tool/test2.rtf");
+
+
     }
 }

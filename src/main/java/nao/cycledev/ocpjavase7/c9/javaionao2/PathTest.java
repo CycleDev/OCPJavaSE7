@@ -1,7 +1,7 @@
 package nao.cycledev.ocpjavase7.c9.javaionao2;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.IOException;
+import java.nio.file.*;
 
 public class PathTest {
 
@@ -16,6 +16,62 @@ public class PathTest {
 
         for (Path element:path){
             System.out.println("\telement: " + element);
+        }
+    }
+
+    public static void fileType(String filePath){
+
+        Path path = Paths.get(filePath);
+        System.out.println("Readible: " + Files.isReadable(path) + ", Writable: " + Files.isWritable(path) +
+            ", Executable: "+ Files.isExecutable(path));
+    }
+
+    public static void fileIsFolder(String file){
+        Path path = Paths.get(file);
+        if (Files.exists(path)){
+            if(Files.isDirectory(path)){
+                System.out.println("File is directory");
+            }
+            else
+            {
+                System.out.println("File is file");
+            }
+        }
+    }
+
+    public static void fileInfo(String file){
+        Path path = Paths.get(file);
+        try {
+            Object createTime = Files.getAttribute(path, "creationTime");
+            Object lastModifiedTime = Files.getAttribute(path, "lastModifiedTime");
+            Object size = Files.getAttribute(path, "size", LinkOption.NOFOLLOW_LINKS);
+            System.out.println("createTime: " + createTime + "\nlastModifiedTime: " + lastModifiedTime + "\nsize: " + size);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void copy(String source, String dest){
+        Path pathSource = Paths.get(source);
+        Path pathDesc = Paths.get(dest);
+
+        try {
+            Files.copy(pathSource, pathDesc, StandardCopyOption.REPLACE_EXISTING);
+            System.out.printf("File %s is copied.", pathSource.getFileName());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void delete(String source){
+        Path pathSource = Paths.get(source);
+
+        try {
+            Files.deleteIfExists(pathSource);
+            System.out.printf("File %s is deleted.", pathSource.getFileName());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
