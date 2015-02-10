@@ -1,6 +1,5 @@
 package nao.cycledev.ocpjavase7.c10.jdbc;
 
-import javax.sql.RowSet;
 import javax.sql.rowset.JdbcRowSet;
 import javax.sql.rowset.RowSetFactory;
 import javax.sql.rowset.RowSetProvider;

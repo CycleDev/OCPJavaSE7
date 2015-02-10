@@ -74,4 +74,29 @@ public class PathTest {
             e.printStackTrace();
         }
     }
+
+    public static void walkFiles(String str, String pattern){
+
+        Path path = Paths.get(str);
+
+        try {
+            Files.walkFileTree(path, new MyFileVisitor(pattern));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void copyFiles(String source, String dest){
+
+        Path sourcePath = Paths.get(source);
+        Path destPath = Paths.get(dest);
+
+        try {
+            Files.walkFileTree(sourcePath, new MyCopyFileVisitor(sourcePath, destPath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

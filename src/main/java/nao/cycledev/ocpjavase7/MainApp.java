@@ -1,14 +1,17 @@
 package nao.cycledev.ocpjavase7;
 
 import nao.cycledev.ocpjavase7.c10.jdbc.TestCon;
+import nao.cycledev.ocpjavase7.c12.localization.LocalizationTest;
+import nao.cycledev.ocpjavase7.c13.threads.MyThread;
 import nao.cycledev.ocpjavase7.c9.javaionao2.PathTest;
 
 public class MainApp {
 
     public static void main(String[] args) {
 
-        TestCon test = new TestCon();
-        test.rowSetTest();
+        Thread myThread = new Thread(new MyThread());
+        myThread.run();
+        System.out.println(myThread);
 
     }
 }
