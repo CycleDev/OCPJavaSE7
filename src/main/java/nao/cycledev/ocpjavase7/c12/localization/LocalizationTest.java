@@ -1,15 +1,11 @@
 package nao.cycledev.ocpjavase7.c12.localization;
 
-<<<<<<< HEAD
-=======
 import java.io.UnsupportedEncodingException;
->>>>>>> 283dacc6658ad72dc6df8e25c5af15c3a9a84e16
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class LocalizationTest {
 
-<<<<<<< HEAD
     public static void resourceBundleTest(){
 
         Locale locale = new Locale("it", "IT");
@@ -21,7 +17,6 @@ public class LocalizationTest {
 
     }
 
-=======
     public static void localInto(){
 
         System.out.printf("Default local: %s %n", Locale.getDefault().toString());
@@ -46,5 +41,4 @@ public class LocalizationTest {
         }
 
     }
->>>>>>> 283dacc6658ad72dc6df8e25c5af15c3a9a84e16
 }

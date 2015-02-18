@@ -22,7 +22,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="OCPJavaSE7" />
+        <module name="nao.cycledev.ocpjavase7" />
       </profile>
     </annotationProcessing>
   </component>
