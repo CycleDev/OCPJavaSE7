@@ -25,6 +25,8 @@
         <module name="OCPJavaSE7" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="OCPJavaSE7" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
-

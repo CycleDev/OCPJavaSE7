@@ -25,4 +25,8 @@ public class StringProcessing {
     public static void replacePhoneTest(){
         Regex.replacePhoneNumber(testStr);
     }
+
+    public static void findStartStr(){
+        Regex.findStartStr(testStr, "d");
+    }
 }

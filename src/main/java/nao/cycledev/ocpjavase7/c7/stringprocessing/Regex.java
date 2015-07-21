@@ -24,10 +24,10 @@ public class Regex {
     }
 
     public static void splitWords(String str){
-        Pattern pattern = Pattern.compile("\\w+");
+        Pattern pattern = Pattern.compile("[A-Z]\\w+");
         Matcher matcher = pattern.matcher(str);
         while (matcher.find()){
-            System.out.println(matcher.group());
+            System.out.println(matcher.start() + " - " + matcher.end() + ": " + matcher.group());
         }
     }
 
@@ -36,5 +36,13 @@ public class Regex {
         Matcher matcher = pattern.matcher(str);
         String newStr = matcher.replaceAll("$1$2-$3$4");
         System.out.println(newStr);
+    }
+
+    public static void findStartStr(String str, String start){
+        Pattern pattern = Pattern.compile("(?i)\\b"+start+"\\S*");
+        Matcher matcher = pattern.matcher(str);
+        while (matcher.find()){
+            System.out.println(matcher.group());
+        }
     }
 }
