@@ -31,6 +31,14 @@ public class Regex {
         }
     }
 
+    public static void splitUppercaseWords(String str){
+        Pattern pattern = Pattern.compile("[A-Z]\\w{1}\\w+");
+        Matcher matcher = pattern.matcher(str);
+        while (matcher.find()){
+            System.out.println(matcher.group());
+        }
+    }
+
     public static void replacePhoneNumber(String str){
         Pattern pattern = Pattern.compile("(\\b)(\\d{3})(\\d{7}(\\b))");
         Matcher matcher = pattern.matcher(str);

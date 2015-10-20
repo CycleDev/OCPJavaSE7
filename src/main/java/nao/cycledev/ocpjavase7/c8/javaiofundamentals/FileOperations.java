@@ -1,6 +1,5 @@
 package nao.cycledev.ocpjavase7.c8.javaiofundamentals;
 
-
 import java.io.*;
 import java.util.Scanner;
 import java.util.Set;

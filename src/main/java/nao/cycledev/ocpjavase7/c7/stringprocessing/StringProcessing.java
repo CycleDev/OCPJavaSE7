@@ -29,4 +29,8 @@ public class StringProcessing {
     public static void findStartStr(){
         Regex.findStartStr(testStr, "d");
     }
+
+    public static void splitUppercaseWords(){
+        Regex.splitUppercaseWords(testStr);
+    }
 }
