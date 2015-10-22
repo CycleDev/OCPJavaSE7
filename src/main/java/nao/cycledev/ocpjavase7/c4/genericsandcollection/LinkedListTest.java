@@ -15,7 +15,7 @@ public class LinkedListTest {
         ListIterator<Character> str1 = chars.listIterator();
         ListIterator<Character> str2 = chars.listIterator(chars.size());
         while(str1.hasNext() && str2.hasPrevious()){
-            if(str1.next() != str2.previous()){
+            if(!str1.next().equals(str2.previous())){
                 return false;
             }
         }

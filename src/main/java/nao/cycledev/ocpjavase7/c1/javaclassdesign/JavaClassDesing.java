@@ -1,7 +1,5 @@
 package nao.cycledev.ocpjavase7.c1.javaclassdesign;
 
-import java.util.Objects;
-
 public class JavaClassDesing {
 
     public static Circle displayCircle1() {
@@ -60,9 +58,9 @@ class Circle extends Shape{
     }
 
     Circle(int xPos, int yPos, int radius) {
-        xPos = xPos;
-        yPos = yPos;
-        radius = radius;
+        this.xPos = xPos;
+        this.yPos = yPos;
+        this.radius = radius;
     }
 
     @Override
