@@ -53,4 +53,12 @@ public class Regex {
             System.out.println(matcher.group());
         }
     }
+
+    public static boolean findVirtualParent(String parent){
+        Pattern pattern = Pattern.compile("(?i)\\bt__\\d{4}WON\\b");
+        Matcher matcher = pattern.matcher(parent);
+        return matcher.find();
+    }
+
+
 }
