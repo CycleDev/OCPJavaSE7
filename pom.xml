@@ -8,5 +8,9 @@
     <artifactId>nao.cycledev.ocpjavase7</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <build>
+        <finalName>OCPJavaSE7</finalName>
+    </build>
+
 
 </project>

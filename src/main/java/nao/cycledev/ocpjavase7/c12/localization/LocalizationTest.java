@@ -1,6 +1,5 @@
 package nao.cycledev.ocpjavase7.c12.localization;
 
-import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -13,10 +12,10 @@ public class LocalizationTest {
 
         Locale locale = new Locale("it", "IT");
         Locale.setDefault(locale);
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("nao.cycledev.ocpjavase7.c12.localization.ResBundle", locale);
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("nao.cycledev.ocpjavase7.c12.localization.RssBundle");
 
         System.out.println("Default locale: " + locale.getDefault());
-        System.out.println("Word: "+ resourceBundle.getString("name") + ", price: " + resourceBundle.getObject("price"));
+        System.out.println("Word: "+ resourceBundle.getString("Name") + ", price: " + resourceBundle.getObject("price"));
 
     }
 
@@ -33,13 +32,8 @@ public class LocalizationTest {
 
     public static void resourcesTest(){
 
-        //Locale.setDefault(new Locale("uk", "UA"));
-        //Locale locale = Locale.getDefault();
-        ResourceBundle resource = ResourceBundle.getBundle("ResourceBundle", new Locale("uk", "UA"));
-
-
+        ResourceBundle resource = ResourceBundle.getBundle("ResourceBundle");
         System.out.println("Word: " + resource.getString("greeting"));
-
 
     }
 
