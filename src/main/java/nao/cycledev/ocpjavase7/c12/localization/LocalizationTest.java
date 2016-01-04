@@ -32,7 +32,7 @@ public class LocalizationTest {
 
     public static void resourcesTest(){
 
-        ResourceBundle resource = ResourceBundle.getBundle("ResourceBundle");
+        ResourceBundle resource = ResourceBundle.getBundle("ResourceBundle", new Locale("uk", "UA"));
         System.out.println("Word: " + resource.getString("greeting"));
 
     }
