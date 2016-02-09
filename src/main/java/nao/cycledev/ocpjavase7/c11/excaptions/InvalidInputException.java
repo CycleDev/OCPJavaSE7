@@ -1,4 +1,4 @@
-package nao.cycledev.ocpjavase7.c11;
+package nao.cycledev.ocpjavase7.c11.excaptions;
 
 public class InvalidInputException extends RuntimeException {
 
