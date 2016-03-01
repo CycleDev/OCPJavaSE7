@@ -1,5 +1,6 @@
 package nao.cycledev.ocpjavase7.c9.javaionao2;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 
@@ -7,7 +8,8 @@ public class PathTest {
 
     public static void GetPathInfo(String fileName){
 
-        Path path = Paths.get(fileName);
+        File file = new File(fileName);
+        Path path = file.toPath();
 
         System.out.println("File system name: " + path.getFileSystem());
         System.out.println("File name: " + path.getFileName());
@@ -97,6 +99,16 @@ public class PathTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+
+    public static void pathTest(){
+        Path path = Paths.get("\\OCPJavaSE7\\..\\obj8\\.\\8-1.txt");
+
+        System.out.println(path.toString());
+        System.out.println(path.getName(0));
+        System.out.println(path.getParent());
+        //System.out.println(path.subpath(2,4));
 
     }
 }
