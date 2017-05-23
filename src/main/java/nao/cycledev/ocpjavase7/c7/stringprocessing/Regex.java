@@ -5,6 +5,19 @@ import java.util.regex.Pattern;
 
 public class Regex {
 
+    // [fdn]ine]
+
+    public static void findSubStr(String str, String subStr){
+
+        Pattern pattern = Pattern.compile(subStr);
+        Matcher matcher = pattern.matcher(str);
+
+        while (matcher.find()){
+            System.out.println(matcher.group() + ": " + matcher.start() + " - " + matcher.end());
+        }
+    }
+
+
     public static void findEmail(String str){
 
         Pattern pattern = Pattern.compile("\\w+@\\w+\\.\\w+");
