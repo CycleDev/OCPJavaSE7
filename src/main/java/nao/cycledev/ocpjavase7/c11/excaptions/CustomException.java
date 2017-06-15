@@ -4,7 +4,7 @@ package nao.cycledev.ocpjavase7.c11.excaptions;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class CustomException {
+public class CustomException implements AutoCloseable {
 
     public static int readIntFromConsol(){
         Scanner scanner = new Scanner(System.in);
@@ -21,5 +21,10 @@ public class CustomException {
         };
 
         return i;
+    }
+
+    @Override
+    public void close() {
+
     }
 }

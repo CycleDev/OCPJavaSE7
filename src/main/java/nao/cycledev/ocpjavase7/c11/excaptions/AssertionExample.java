@@ -9,7 +9,7 @@ public class AssertionExample {
 
         System.out.println("value: " + value);
 
-        assert (value>=0) : "value is negative";
+        assert (value<0) : "value is negative";
 
         return value;
 
