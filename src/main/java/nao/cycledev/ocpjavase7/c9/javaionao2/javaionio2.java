@@ -4,8 +4,8 @@ import java.io.File;
 
 public class javaionio2 {
 
-    private static final String FILE_PATH = "C:\\temp\\testfile.txt";
-    private static final String FILE_DIR = "C:\\temp\\";
+    private static final String FILE_PATH = "E:\\temp\\testfile.txt";
+    private static final String FILE_DIR = "E:\\temp\\";
 
     public static void testGetPathInfo(){
         PathTest.GetPathInfo(FILE_PATH);

@@ -15,4 +15,14 @@ public class FilesTests {
         }
 
     }
+
+    public static void createDirectory(String dir) throws IOException {
+
+        Files.createDirectory(Paths.get(dir));
+    }
+
+    public static void createDirectories(String dir) throws IOException {
+
+        Files.createDirectories(Paths.get(dir));
+    }
 }
