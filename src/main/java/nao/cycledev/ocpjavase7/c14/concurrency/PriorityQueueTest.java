@@ -8,23 +8,17 @@ public class PriorityQueueTest {
 
         final PriorityBlockingQueue<Integer> priorityQueue = new PriorityBlockingQueue<>();
 
-        new Thread(){
-            @Override
-            public void run() {
-                try {
-                    System.out.println("Removing: " + priorityQueue.take());
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        new Thread(() -> {
+            try {
+                System.out.println("Removing: " + priorityQueue.take());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        }.start();
+        }).start();
 
-        new Thread(){
-            @Override
-            public void run() {
-                priorityQueue.add(10);
-                System.out.println("Added!!!");
-            }
-        }.start();
+        new Thread(() -> {
+            priorityQueue.add(10);
+            System.out.println("Added!!!");
+        }).start();
     }
 }
