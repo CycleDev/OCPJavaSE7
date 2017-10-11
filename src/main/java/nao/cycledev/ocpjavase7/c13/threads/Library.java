@@ -51,12 +51,14 @@ class ReturnBook extends Thread {
 
 public class Library {
 
-    public void test() {
+    public static void test() {
         Book book = new Book("Java");
         Thread thread1 = new BuyBook(book);
         thread1.start();
+        System.out.println(book);
         Thread thread2 = new BuyBook(book);
         thread2.start();
+        System.out.println(book);
         Thread thread3 = new ReturnBook(book);
         thread3.start();
         System.out.println(book);

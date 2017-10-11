@@ -10,7 +10,7 @@ public class FileOperations {
 
     public static void readTextFile(String fileName){
         try (BufferedReader file = new BufferedReader(new FileReader(fileName))){
-            int c = 0;
+            int c;
             while((c = file.read()) != -1){
                 System.out.print((char)c);
             }
@@ -25,7 +25,7 @@ public class FileOperations {
         try (BufferedReader input = new BufferedReader(new FileReader(targetFile));
              BufferedWriter output = new BufferedWriter(new FileWriter(destFile)))
         {
-            int ch = 0;
+            int ch;
             while ((ch = input.read()) != -1){
                 output.write((char)ch);
             }
@@ -93,10 +93,8 @@ public class FileOperations {
 
     public static void copyPDFFileBuffered(String source, String dest) throws IOException {
 
-        try (FileInputStream is = new FileInputStream(source);
-             FileOutputStream os = new FileOutputStream(dest);
-             BufferedInputStream bis = new BufferedInputStream(is);
-             BufferedOutputStream bos = new BufferedOutputStream(os)) {
+        try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(source));
+             BufferedOutputStream bos = new BufferedOutputStream( new FileOutputStream(dest))) {
 
             int data;
 

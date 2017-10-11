@@ -14,6 +14,5 @@ public class TimeBomb extends Thread {
                 e.printStackTrace();
             }
         }
-        System.out.println("Booooooooommmmmmmmmmmmmmm!!!!");
     }
 }

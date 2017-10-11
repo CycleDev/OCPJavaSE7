@@ -15,11 +15,9 @@ public class SystemConsol {
     }
 
     public static void printString(){
-
         String str = "å, ä, and ö";
         System.out.println(str);
         System.out.printf(str);
-
     }
 
 }

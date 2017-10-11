@@ -5,14 +5,15 @@ import java.nio.file.*;
 
 public class FileChangesTracking {
 
-    public void trackFile(String str){
+    public static void trackFile(String str){
         Path path = Paths.get(str);
 
         WatchService watchService = null;
         try {
             watchService = path.getFileSystem().newWatchService();
 
-            path.register(watchService, StandardWatchEventKinds.ENTRY_MODIFY);
+            path.register(watchService, StandardWatchEventKinds.ENTRY_MODIFY,
+                    StandardWatchEventKinds.ENTRY_CREATE, StandardWatchEventKinds.ENTRY_DELETE);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -33,6 +34,12 @@ public class FileChangesTracking {
                         break;
                     case "ENTRY_MODIFY":
                         System.out.println("File " + event.context() + " is changed.");
+                        break;
+                    case "ENTRY_CREATE":
+                        System.out.println("File " + event.context() + " is created.");
+                        break;
+                    case "ENTRY_DELETE":
+                        System.out.println("File " + event.context() + " is deleted.");
                         break;
                 }
             }

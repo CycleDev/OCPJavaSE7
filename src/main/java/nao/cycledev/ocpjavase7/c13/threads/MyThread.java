@@ -1,17 +1,16 @@
 package nao.cycledev.ocpjavase7.c13.threads;
 
-import static java.lang.Thread.sleep;
-
-public class MyThread implements Runnable {
-
+public class MyThread extends Thread {
 
     @Override
-    public void run() {
+    synchronized public void run() {
+
         try {
-            sleep(1000);
+            wait();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Thread is running: " + Thread.currentThread().getName());
+
+       // notify();
     }
 }
