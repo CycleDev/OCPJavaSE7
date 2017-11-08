@@ -1,8 +1,6 @@
 package nao.cycledev.ocpjavase7.c4.genericsandcollection;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class ArrayListTest {
 
@@ -20,5 +18,17 @@ public class ArrayListTest {
             String item = items.next();
             System.out.println(item);
         }
+    }
+
+    public static void queueTest() {
+        List<String> queue = new ArrayList<>();
+        queue.add("111");
+        queue.add("222");
+        queue.add("333");
+        queue.add("444");
+        queue.add(null);
+
+        System.out.println(": " + queue);
+
     }
 }

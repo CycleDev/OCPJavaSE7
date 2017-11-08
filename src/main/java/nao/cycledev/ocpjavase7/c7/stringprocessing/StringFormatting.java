@@ -7,7 +7,7 @@ public class StringFormatting {
     private static double doubleValue = 123.45618;
 
     public static void testPrintf(){
-        System.out.printf("Value: " + doubleValue + "; Result double %-10.2f", doubleValue);
+        System.out.printf("Value: " + doubleValue + "; Result double: %010.2f", doubleValue);
 
     }
 
